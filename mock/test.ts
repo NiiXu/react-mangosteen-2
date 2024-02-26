@@ -3,6 +3,8 @@ export default [
   {
     url: '/api/v1/me',
     method: 'get',
+    type: 'json',
+    timeout:10000,
     response: (): Resource<User> => {
       return {
         resource: {
