@@ -6,7 +6,7 @@ import { Welcome1 } from '../pages/Welcome1'
 import { Welcome2 } from '../pages/Welcome2'
 import { Welcome3 } from '../pages/Welcome3'
 import { Welcome4 } from '../pages/Welcome4'
-
+import { ItemsPage } from '../pages/ItemsPage'
 export const router = createBrowserRouter([
   { path: '/', element: <Root />, },
   { path: '/home', element: <Home title="首页" /> },
@@ -20,5 +20,5 @@ export const router = createBrowserRouter([
       { path: '4', element: <Welcome4 /> },
     ]
   },
-  { path: '/items', element: <div>items</div> },
+  { path: '/items', element: <ItemsPage /> },
 ])
