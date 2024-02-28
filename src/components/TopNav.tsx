@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {Icon} from './Icon';
-import {menuContext} from '../pages/ItemsPage';
+import {menuContext} from '../contexts/menuContext';
 
 interface Props {
     title?: string
