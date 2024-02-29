@@ -8,7 +8,6 @@ import {ItemsList} from './ItemsPage/ItemsList'
 import styled from 'styled-components'
 import {TopMenu} from '../components/TopMenu'
 import {useMenuStore} from '../stores/useMenuStore'
-import { Icon } from '../components/Icon'
 
 const Div = styled.div`
   background: linear-gradient(0deg, rgba(143, 76, 215, 1) 0%, rgba(92, 51, 190, 1) 100%);
@@ -40,7 +39,7 @@ export const ItemsPage: React.FC = () => {
     ])
     //上下文===局部的全局变量
     //全局变量===全局的上下文
-    const { visible } = useMenuStore()
+    const { visible,setVisible } = useMenuStore()
     return (
         <div>
             <Div>
@@ -50,7 +49,7 @@ export const ItemsPage: React.FC = () => {
             <ItemsSummary/>
             <ItemsList items={items}/>
             <AddItemFloatButton/>
-            {visible ? <TopMenu/> : null}
+            {visible ? <TopMenu onClickMask={()=>{ setVisible(false) }}/> : null}
 
         </div>
     )
