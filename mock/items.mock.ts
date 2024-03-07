@@ -1,5 +1,5 @@
 import type { MockMethod } from 'vite-plugin-mock'
-import { faker} from '@faker-js/faker';
+import { faker } from '@faker-js/faker'
 
 let id = 0
 const createId = () => {
@@ -27,7 +27,6 @@ const createList = (n: number, attrs?: Partial<Item>): Item[] => {
 const createResponse = ({ count = 10, perPage = 10, page = 1 }, attrs?: Partial<Item>,): Resources<Item> => {
     const sendCount = (page - 1) * perPage
     const left = count - sendCount
-
     return {
         resources: left > 0 ? createList(Math.min(left, perPage), attrs) : [],
         pager: {
@@ -38,11 +37,11 @@ const createResponse = ({ count = 10, perPage = 10, page = 1 }, attrs?: Partial<
     }
 }
 
-
 export const itemsMock: MockMethod = {
     url: '/api/v1/items',
     method: 'get',
     statusCode: 200,
+    timeout:200,
     response: ({ query }: ResponseParams): Resources<Item> =>
         createResponse({ count: 30, perPage: 10, page: parseInt(query.page) })
     ,
