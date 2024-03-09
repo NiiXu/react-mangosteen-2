@@ -6,7 +6,7 @@ html{
   "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 }
 :root {
-  --un-shadow-color: red;
+  --un-shadow-color: rgba(0,0,0,0.25);
   --z-default:128;
   --z-menu:156;
   --z-dialog:512;
@@ -19,6 +19,9 @@ ol, ul{list-style: none;}
 
 
 
-button{font: inherit;}
+button, input{font: inherit;}
 
 
+:focus {
+  outline: none;
+}
