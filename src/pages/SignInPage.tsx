@@ -29,6 +29,7 @@ export const SignInPage: React.FC = () => {
             </div>
             <form j-form onSubmit={onSubmit}>
                 <div b-1 b-red>{JSON.stringify(data)}</div>
+                <div b-1 b-red>{JSON.stringify(error)}</div>
                 <div>
                     <span j-form-label>邮箱地址 {error.email?.[0] && <span text-red>{error.email[0]}</span>}</span>
                     <input j-input-text type="text" placeholder='请输入邮箱，然后点击发送验证码'
