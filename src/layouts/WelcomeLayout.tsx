@@ -32,7 +32,8 @@ export const WelcomeLayout: React.FC = () => {
     }
   })
   const main = useRef<HTMLElement>(null)
-  const { direction } = useSwipe(main, { onTouchStart: e => e.preventDefault() })
+  const { direction } = useSwipe(main)
+  // console.log(direction)
   const nav = useNavigate()
   useEffect(() => {
     if (direction === 'left') {
@@ -47,7 +48,7 @@ export const WelcomeLayout: React.FC = () => {
   }
   return (
     <div className="bg-#5f34bf" h-screen flex flex-col items-stretch pb-16px>
-      <Link fixed text-white top-16px right-16px text-32px to="/welcome/xxx">跳过</Link>
+      <Link fixed text-white top-16px right-16px text-32px to="/welcome/4">跳过</Link>
       <header shrink-0 text-center pt-64px>
         <img src={logo} w-64px h-69px />
         <h1 text="#D4D4EE" text-32px>山竹记账</h1>

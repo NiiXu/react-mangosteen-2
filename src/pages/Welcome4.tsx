@@ -10,7 +10,7 @@ export const Welcome4: React.FC = () => {
         再也不怕数据丢失
       </h2>
         <div mt-64px>
-            <Link text-32px color="#6035BF" font-bold to="/welcome/xxx">开启应用</Link>
+            <Link text-32px color="#6035BF" font-bold to="/home">开启应用</Link>
         </div>
     </div>
   )
