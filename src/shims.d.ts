@@ -1,9 +1,11 @@
 import * as React from 'react'
-import {SVGAttributes} from 'react';
+import { SVGAttributes } from 'react';
 declare module 'react' {
   interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
+    absolute?: boolean
     flex?: boolean
     relative?: boolean
+    top?: string
     text?: string
     grid?: boolean
     before?: string
@@ -15,11 +17,11 @@ declare module 'react' {
     rounded?: string
     fixed?: boolean
     b?: string
-    z?:string
+    z?: string
     block?: boolean
     'focus:shadow'?: boolean
   }
-  interface SVGProps<T> extends SVGAttributes<T>,ClassAttributes<T> {
+  interface SVGProps<T> extends SVGAttributes<T>, ClassAttributes<T> {
     w?: string
     h?: string
   }
