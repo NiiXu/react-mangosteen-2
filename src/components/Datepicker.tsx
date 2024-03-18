@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { time } from '../lib/time'
 
 type Props = {
   start?: Date
@@ -13,7 +14,7 @@ export const Datepicker: React.FC<Props> = (props) => {
   return (
     <div h="50vh" overflow-hidden relative
       onTouchStart={(e) => {
-        setIsTouching(true)
+        setIsTouching(true)s
         setLastY(e.touches[0].clientY)
       }}
       onTouchMove={(e) => {
