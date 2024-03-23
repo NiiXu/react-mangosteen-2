@@ -9,7 +9,8 @@ import { Welcome4 } from '../pages/Welcome4'
 import { ItemsPage } from '../pages/ItemsPage'
 import { SignInPage } from '../pages/SignInPage';
 import { ItemsNewPage } from '../pages/ItemsNewPage';
-import { TagsNewPage } from '../pages/TagsNewpage'
+import { TagsNewPage } from '../pages/TagsNewPage'
+import { TagsEditPage } from '../pages/TagsEditPage'
 export const router = createBrowserRouter([
   { path: '/', element: <Root />, },
   { path: '/home', element: <Home title="首页" /> },
@@ -31,4 +32,7 @@ export const router = createBrowserRouter([
   { path: '/tags', element: <div>标签</div> },
   { path: '/noty', element: <div>敬请期待</div> },
   { path: '/tags/new', element: <TagsNewPage /> },
+  { path: '/tags/:id', element: <TagsEditPage /> },
+
+
 ])
