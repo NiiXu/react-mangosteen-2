@@ -11,6 +11,7 @@ import { SignInPage } from '../pages/SignInPage';
 import { ItemsNewPage } from '../pages/ItemsNewPage';
 import { TagsNewPage } from '../pages/TagsNewPage'
 import { TagsEditPage } from '../pages/TagsEditPage'
+import { StatisticsPage } from '../pages/StatisticsPage'
 export const router = createBrowserRouter([
   { path: '/', element: <Root />, },
   { path: '/home', element: <Home title="首页" /> },
@@ -27,7 +28,7 @@ export const router = createBrowserRouter([
   { path: '/items', element: <ItemsPage /> },
   { path: '/items/new', element: <ItemsNewPage /> },
   { path: '/sign_in', element: <SignInPage /> },
-  { path: '/chart', element: <div>图表</div> },
+  { path: '/statistics', element: <StatisticsPage /> },
   { path: '/export', element: <div>敬请期待</div> },
   { path: '/tags', element: <div>标签</div> },
   { path: '/noty', element: <div>敬请期待</div> },
